@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d1mhbf2ma8qey"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wk6at"]
+friction = 0.0
+bounce = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wk6at"]
+size = Vector2(250, 30)
+
+[node name="ice" type="StaticBody2D" unique_id=1523854239 groups=["gelo"]]
+physics_material_override = SubResource("PhysicsMaterial_wk6at")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=367915461]
+color = Color(0.31189, 0.993777, 0.9548195, 1)
+polygon = PackedVector2Array(-125, -15, 125, -15, 125, 15, -125, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1618347853]
+shape = SubResource("RectangleShape2D_wk6at")
